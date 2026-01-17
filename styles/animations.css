@@ -1,0 +1,24 @@
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.fade-up.visible {
+  animation: fadeUp 1s cubic-bezier(.4,0,.2,1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
