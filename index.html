@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeniorXP | Protocolo Sênior30</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c9a24d;
+            --dark: #050a12;
+            --navy: #0a192f;
+            --text: #e6f1ff;
+            --gray: #8892b0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--dark); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; }
+
+        /* HEADER & LOGO */
+        header { padding: 30px 5%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.8rem; color: var(--gold); letter-spacing: -1px; text-transform: uppercase; }
+
+        /* HERO SECTION */
+        .hero { padding: 100px 5%; text-align: center; max-width: 1000px; margin: 0 auto; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 20px; text-transform: uppercase; }
+        .hero h1 span { color: var(--gold); }
+        .hero p { font-size: 1.2rem; color: var(--gray); margin-bottom: 40px; max-width: 700px; margin-inline: auto; }
+
+        /* BUTTONS */
+        .btn { background: var(--gold); color: var(--dark); padding: 20px 40px; font-weight: 900; text-decoration: none; border-radius: 4px; display: inline-block; transition: 0.3s; text-transform: uppercase; border: none; cursor: pointer; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(201, 162, 77, 0.3); }
+
+        /* SECTIONS */
+        section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+        .section-tag { color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; display: block; margin-bottom: 10px; }
+        h2 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 30px; }
+
+        /* CHRONOGRAM GRID */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .card { background: var(--navy); padding: 40px; border-radius: 8px; border-top: 4px solid var(--gold); transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card h3 { color: var(--gold); margin-bottom: 15px; text-transform: uppercase; }
+        .card ul { list-style: none; color: var(--gray); font-size: 0.95rem; }
+        .card ul li { margin-bottom: 10px; display: flex; align-items: flex-start; }
+        .card ul li::before { content: "▹"; color: var(--gold); margin-right: 10px; }
+
+        /* ABOUT SECTION */
+        .about { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+        .about-text { flex: 1; min-width: 300px; }
+        .about-image { flex: 1; min-width: 300px; text-align: center; }
+        .about-image img { width: 100%; max-width: 400px; border-radius: 10px; border: 2px solid var(--gold); padding: 10px; }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">SENIORXP</div>
+</header>
+
+<main>
+    <section class="hero">
+        <span class="section-tag">O Protocolo de 90 dias</span>
+        <h1>Seja <span>Sênior antes dos 30</span> sem depender de faculdade.</h1>
+        <p>Domine as Shadow Skills necessárias para ocupar cadeiras de decisão em grandes corporações. Aprenda a mentalidade de um sênior.</p>
+        <a href="#aplicar" class="btn">Quero Aplicar para a Mentoria</a>
+    </section>
+
+    <section style="background: #081221; max-width: 100%;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 40px 5%;">
+            <h2 style="text-align: center;">O jogo mudou. <span style="color: var(--gold);">Você vai continuar como operário?</span></h2>
+            <p style="text-align: center; color: var(--gray); max-width: 800px; margin: 0 auto;">
+			Frameworks morrem a cada 2 anos. 
+			As habilidades de poder e influência são eternas. 
+			</br>O Protocolo Sênior30 não ensina sintaxe, ensina como você deve agir para ser o que os diretores desejam.</p>
+        </div>
+    </section>
+
+    <section id="cronograma">
+        <span class="section-tag">A Jornada</span>
+        <h2>O Caminho do Estrategista</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Mês 1: Desconstrução</h3>
+                <ul>
+                    <li>Transição: Execução para Estratégia.</li>
+                    <li>Engenharia de Valor e ROI do Projeto.</li>
+                    <li>Como calcular o custo da inércia.</li>
+                    <li>Visão de Dono aplicada ao Tech.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Mês 2: Autoridade</h3>
+                <ul>
+                    <li>A Entrevista Invertida: Assuma o Controle.</li>
+                    <li>Diplomacia e Guerra Comercial.</li>
+                    <li>Micro-influência Executiva no LinkedIn.</li>
+                    <li>Sinais de Poder e Comunicação de Alto Nível.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Mês 3: Maestria</h3>
+                <ul>
+                    <li>Psicologia Aplicada à Carreira.</li>
+                    <li>Negociação High Ticket (Aumentos e Bônus).</li>
+                    <li>Shadowing: Análise de casos reais da HDI.</li>
+                    <li>O Plano de Voo para os próximos 12 meses.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+	
+	 <!-- <section style="background: #081221; max-width: 100%;"> -->
+        <!-- <div style="max-width: 1200px; margin: 0 auto; padding: 40px 5%;"> -->
+            <!-- <h2 style="text-align: center;">40.000 formados em ADS por ano. <span style="color: var(--gold);">O que você tem de diferente deles?</span></h2> -->
+            <!-- <p style="text-align: center; color: var(--gray); max-width: 800px; margin: 0 auto;"> -->
+			<!-- Entre no 1% que domina esse jogo, apenas a formação não te colocará no mercado real de trabalho.  -->
+			<!-- </br>Mas claro que você já sabe disso,  -->
+			<!-- só não sabia o que fazer (até agora). -->
+        <!-- </div> -->
+    <!-- </section> -->
+
+<section style="background: #081221; max-image: 100%; border-y: 1px solid #1a2a40;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 60px 5%; text-align: center;">
+        <h2 style="font-size: 2.8rem;">O Mar de <span style="color: var(--gold);">40.000 Iguais</span></h2>
+        <p style="color: var(--gray); max-width: 850px; margin: 20px auto; font-size: 1.2rem;">
+            Todos os anos, cerca de <strong>40.000 novos profissionais</strong> se formam em ADS no Brasil. 
+            Todos com o mesmo diploma, as mesmas hard skills e a mesma ilusão: a de que o código perfeito trará a promoção.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px;">
+            <div style="border: 1px solid var(--gold); padding: 20px; border-radius: 4px; min-width: 250px;">
+                <span style="display: block; font-size: 2rem; color: var(--gold); font-weight: 900;">1%</span>
+                <span style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Chegam ao topo</span>
+            </div>
+            <div style="border: 1px solid #1a2a40; padding: 20px; border-radius: 4px; min-width: 250px;">
+                <span style="display: block; font-size: 2rem; color: var(--text); font-weight: 900;">99%</span>
+                <span style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Operários de Código</span>
+            </div>
+        </div>
+		<h2 style=" padding-top: 40px;"><span style="color: var(--gold);">E você, fez o que de diferente?</span></h2>
+    </div>
+</section>
+
+<section class="about">
+    <div class="about-image">
+        <img src="assets/lc-portrait-landing.png" alt="Lucas Castilho" style="width: 100%; border-radius: 4px; filter: grayscale(30%);">
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; text-align: left;">
+            <div style="background: #0a192f; padding: 10px; border-left: 3px solid var(--gold);">
+                <small style="color: var(--gold); display: block; text-transform: uppercase; font-size: 0.7rem;">Educação</small>
+                <span style="font-size: 0.85rem; font-weight: bold;">MBA FIA + ADS + Gestão</span>
+            </div>
+            <div style="background: #0a192f; padding: 10px; border-left: 3px solid var(--gold);">
+                <small style="color: var(--gold); display: block; text-transform: uppercase; font-size: 0.7rem;">Campo de Batalha</small>
+                <span style="font-size: 0.85rem; font-weight: bold;">HDI Seguros</span>
+            </div>
+            <div style="background: #0a192f; padding: 10px; border-left: 3px solid var(--gold);">
+                <small style="color: var(--gold); display: block; text-transform: uppercase; font-size: 0.7rem;">Performance</small>
+                <span style="font-size: 0.85rem; font-weight: bold;">Multi-Sports Athlete</span>
+            </div>
+            <div style="background: #0a192f; padding: 10px; border-left: 3px solid var(--gold);">
+                <small style="color: var(--gold); display: block; text-transform: uppercase; font-size: 0.7rem;">Mindset</small>
+                <span style="font-size: 0.85rem; font-weight: bold;">Shadow Skills</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="about-text">
+        <span class="section-tag">Directing the Game</span>
+        <h2>A Maestria vem do Equilíbrio</h2>
+        <p>Eu não sou apenas um desenvolvedor que leu alguns livros de gestão. Eu vivo a política de uma multinacional e a disciplina de um atleta de resistência.</p>
+        <p style="margin-top: 15px; color: var(--gray);">
+            O <strong>Protocolo SêniorXP</strong> nasceu da necessidade de criar profissionais que aguentam a pressão do "C-Level". Se você quer ser medíocre, o diploma de ADS basta. Se você quer o topo, precisa de vigor, estratégia e a pele no jogo.
+        </p>
+    </div>
+</section>
+
+    <!-- <section class="about"> -->
+        <!-- <div class="about-image">             -->
+			<!-- <img src="assets/lc-portrait-landing.png">			 -->
+		<!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="about-text"> -->
+            <!-- <span class="section-tag">O Mentor</span> -->
+            <!-- <h2>Lucas Castilho</h2> -->
+            <!-- <p>Atuante como Consultor de Sistemas Sênior na <strong>HDI Seguros</strong>,  -->
+			<!-- decifrei o código da ascensão rápida em ambientes complexos, e com isso -->
+			<!-- atingi cargo de <strong>Sênior antes dos 30 anos de idade mesmo sem formação acadêmica</strong>. -->
+			<!-- Unindo a lógica técnica de ADS com a visão estratégica de um MBA pela FIA,  -->
+			<!-- desenvolvi o Protocolo Sênior30 para formar a próxima geração de pessoas preciosas  -->
+			<!-- que as empresas desesperadamente buscam, mas não sabem onde encontrar.</p> -->
+        <!-- </div> -->
+    <!-- </section> -->
+
+    <section id="aplicar" style="text-align: center; padding-bottom: 150px;">
+        <h2>Pronto para dominar o jogo?</h2>
+        <p style="margin-bottom: 30px; color: var(--gray);">As vagas são limitadas por aplicação para garantir o acompanhamento individual (Hot Seats).</p>
+        <a href="SUA_URL_DO_FORMULARIO" class="btn">Preencher Formulário de Aplicação</a>
+    </section>
+</main>
+
+<footer style="text-align: center; padding: 40px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid #1a2a40;">
+    &copy; 2026 SeniorXP. Todos os direitos reservados. Design focado em Performance.
+</footer>
+
+</body>
+</html>
