@@ -40,7 +40,7 @@ body::after {
 /* Conteúdo acima */
 body > *:not(.glitch-waves) {
   position: relative;
-  z-index: 2;
+  --z-index: 2;
 }
 
 .container {
@@ -75,7 +75,7 @@ body > *:not(.glitch-waves) {
 }
 
 .cta {
-  display: inline-block;
+  --display: inline-block;
   margin-top: 2.5rem;
   padding: 0.9rem 1.8rem;
   border-radius: 999px;
@@ -173,8 +173,9 @@ body > *:not(.glitch-waves) {
 
 /*CTA*/
 .cta-final {
-  padding: 10rem 0 35rem;
+  padding: 120rem 0 1rem;
   text-align: center;
+  z-index: 20;
 }
 
 .cta-box {
@@ -211,8 +212,8 @@ body > *:not(.glitch-waves) {
 
 .cta-wrapper {
   position: relative;
-  z-index: 3;
-  margin-bottom: 32rem; /* buffer real antes do footer */
+  z-index: 20;
+  margin-bottom: 0rem; /* buffer real antes do footer */
 }
 
 /*avaliação*/
@@ -277,5 +278,5 @@ footer {
 }
 
 .footer span {
-  margin-top: 35em;
+  margin-top: 0em;
 }
