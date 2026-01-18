@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SeniorXP — Aceleração de Carreira</title>
+  <title>SeniorXP | Aceleração de Carreira</title>
 
   <!-- Fonte moderna -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,37 +14,81 @@
 </head>
 <body>
 
-  <!-- 🌊 Ondas Glitch -->
-  <svg class="glitch-waves" viewBox="0 0 1440 900" preserveAspectRatio="none">
-    <defs>
-      <filter id="glitch">
-        <feTurbulence type="turbulence" baseFrequency="0.015" numOctaves="2" seed="2">
-          <animate attributeName="baseFrequency" dur="10s" values="0.01;0.02;0.01" repeatCount="indefinite" />
-        </feTurbulence>
-        <feDisplacementMap in="SourceGraphic" scale="40" />
-      </filter>
-    </defs>
+  <!-- 🚀 Space Warp Background -->
 
-    <path
-      d="M0,320 C240,380 480,260 720,320 960,380 1200,260 1440,320 L1440,0 L0,0 Z"
-      fill="rgba(201,162,77,0.10)"
-      filter="url(#glitch)" />
+  <svg class="glitch-waves"  viewBox="0 0 1440 4000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Animação para a nebulosa pulsar e se mover sutilmente */
+    @keyframes nebula-float {
+      0% { filter: url(#nebula-noise); transform: scale(1); }
+      50% { filter: url(#nebula-noise-alt); transform: scale(1.05); }
+      100% { filter: url(#nebula-noise); transform: scale(1); }
+    }
 
-    <path
-      d="M0,450 C240,510 480,390 720,450 960,510 1200,390 1440,450 L1440,0 L0,0 Z"
-      fill="rgba(255,255,255,0.04)"
-      filter="url(#glitch)" />
-  </svg>
+    /* Animação de brilho para as estrelas */
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    .nebula-layer {
+      animation: nebula-float 25s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    .star {
+      fill: #c9a24d;
+      animation: twinkle var(--duration) ease-in-out infinite;
+      animation-delay: var(--delay);
+    }
+  </style>
+
+  <defs>
+    <filter id="nebula-noise" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="1" stitchTiles="stitch" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.1  0 0 0 0 0.05  0 0 0 0 0.2  0 0 0 0.6 0" />
+      <feDisplacementMap in="SourceGraphic" scale="60" />
+    </filter>
+
+    <filter id="nebula-noise-alt" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" seed="5" stitchTiles="stitch" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.15  0 0 0 0 0.08  0 0 0 0 0.25  0 0 0 0.7 0" />
+      <feDisplacementMap in="SourceGraphic" scale="80" />
+    </filter>
+
+    <radialGradient id="space-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#111418" />
+      <stop offset="100%" stop-color="#0e1012" />
+    </radialGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#space-grad)" />
+
+  <rect class="nebula-layer" width="100%" height="100%" fill="transparent" filter="url(#nebula-noise)" style="mix-blend-mode: screen; opacity: 0.5;" />
+
+  <g id="stars">
+    <circle class="star" cx="200" cy="150" r="1.5" style="--duration: 3s; --delay: 0s;" />
+    <circle class="star" cx="600" cy="450" r="2"   style="--duration: 4s; --delay: 1s;" />
+    <circle class="star" cx="1100" cy="250" r="1"  style="--duration: 2s; --delay: 0.5s;" />
+    <circle class="star" cx="400" cy="700" r="1.8" style="--duration: 5s; --delay: 2s;" />
+    <circle class="star" cx="1300" cy="800" r="1.2" style="--duration: 3.5s; --delay: 1.5s;" />
+    <circle class="star" cx="850" cy="100" r="1.5" style="--duration: 4.5s; --delay: 0.2s;" />
+  </g>
+
+
+
+</svg>
+
 
   <!-- HERO -->
   <header class="hero parallax" data-speed="0.2">
     <div class="container">
       <h1>Não é hard skill.<br><span>É domínio do jogo.</span></h1>
       <p>
-        A SeniorXP acelera juniores e plenos para atuarem como seniors —
+        A SeniorXP acelera juniores e plenos para atuarem como seniors -
         com visão de negócio, comunicação estratégica e poder de influência.
       </p>
-      <!--<a href="#" class="cta">Entrar no Ecossistema</a>-->
+      <!-- <a href="#" class="cta">Entrar no Ecossistema</a> -->
     </div>
   </header>
 
@@ -75,7 +119,7 @@
 		</br>Recompensa quem sabe se vender.
       </p>
       <!-- <p> -->
-        <!-- A SeniorXP forma profissionais completos — técnica, postura, presença, -->
+        <!-- A SeniorXP forma profissionais completos - técnica, postura, presença, -->
         <!-- estilo de vida e leitura de poder. -->
       <!-- </p>	   -->
     </div>
@@ -89,7 +133,7 @@
         Inteligência sem influência é só potencial desperdiçado.
       </p>
       <!-- <p> -->
-        <!-- A SeniorXP forma profissionais completos — técnica, postura, presença, -->
+        <!-- A SeniorXP forma profissionais completos - técnica, postura, presença, -->
         <!-- estilo de vida e leitura de poder. -->
       <!-- </p>		   -->
     </div>
@@ -103,7 +147,7 @@
         O que ninguém te ensina, mas todo decisor usa.
       </p>
       <!-- <p> -->
-        <!-- A SeniorXP forma profissionais completos — técnica, postura, presença, -->
+        <!-- A SeniorXP forma profissionais completos - técnica, postura, presença, -->
         <!-- estilo de vida e leitura de poder. -->
       <!-- </p>	 -->
     </div>
@@ -116,7 +160,7 @@
         O jogo é mais parecido com esporte e política do que com prova escrita.
       </p>
       <!-- <p> -->
-        <!-- A SeniorXP forma profissionais completos — técnica, postura, presença, -->
+        <!-- A SeniorXP forma profissionais completos - técnica, postura, presença, -->
         <!-- estilo de vida e leitura de poder. -->
       <!-- </p>	 -->
     </div>
@@ -194,7 +238,7 @@
 		</span>
 
 		<a href="avaliacao.html" class="cta cta-strong">
-		  Solicitar avaliação
+		  Solicitar avaliação estratégica
 		</a>
 	  </div>
 </section>
